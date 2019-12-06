@@ -1,0 +1,25 @@
+.header {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.logo {
+    width: 5rem;
+    height: auto;
+    margin: 2rem;
+}
+.sklad {
+    background-color: white;
+    border: #bdbdbd 1px;
+    display: block;
+    flex-direction: row;
+    align-items: center;
+    padding: 2em;
+    font-size: large;
+    padding-left: 3em;
+}
+.centerBlock {
+    display: table;
+    margin: auto;
+}
