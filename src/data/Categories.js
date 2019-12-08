@@ -1,6 +1,6 @@
 var Categories = [
   {
-    name: 'Ložnice',
+    name: 'Postele',
     subcategory: ['Komplet', 'Rámy', 'Rošty', 'Matrece', 'Textil']
   },
   {

@@ -61,15 +61,15 @@ export default class LoginForm extends Component {
             </h3>
           }
           <Form.Group>
-            <Form.Control type="text" placeholder="Username" size="lg" value={this.state.username} onChange={this.handleUserChange} required />
+            <Form.Control type="text" placeholder="Uživatelské jméno" size="lg" value={this.state.username} onChange={this.handleUserChange} required />
           </Form.Group>
 
           <Form.Group>
-            <Form.Control type="password" placeholder="Password" size="lg" value={this.state.password} onChange={this.handlePassChange} required />
+            <Form.Control type="password" placeholder="Heslo" size="lg" value={this.state.password} onChange={this.handlePassChange} required />
           </Form.Group>
 
           <Form.Group>
-            <Form.Control type="submit" value="Log In" data-test="submit" size="lg" />
+            <Form.Control type="submit" value="Přihlásit se" data-test="submit" size="lg" />
           </Form.Group>
         </Form>
       </Container>

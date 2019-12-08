@@ -17,7 +17,7 @@ function Header() {
           <img src={storage} alt="Logo" className="logo "/>
         </Col>
 
-        <Col className="search" md={{ span:6 }}>
+        {/*<Col className="search" md={{ span:6 }}>
           <InputGroup className="search">
             <FormControl
               placeholder="Search"
@@ -30,7 +30,7 @@ function Header() {
               </Button>
             </InputGroup.Append>
           </InputGroup>
-        </Col>
+        </Col>*/}
 
         <Col>
           <div className="leftBlock">

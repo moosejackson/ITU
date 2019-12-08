@@ -1,16 +1,19 @@
 .App {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .main {
-  background-color: #2196f3;
+    background-color: #2196f3;
+    padding-bottom: 2em;
+    padding-left: auto;
+    padding-right: auto;
 }
 
 .centerBlock {
-  display: table;
-  margin: auto;
+    display: table;
+    margin: auto;
 }
 
 .leftBlock {

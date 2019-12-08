@@ -25,16 +25,7 @@ export default class Storage extends Component{
     return (
       <Container>
         <Header/>
-
-        <Row >
-          <Col md={3} float="center" className="sklad align-middle border border-secondary">
-            <Central />
-            <BootstrapTable keyField='name' data={ Categories } columns={ columns } headerClasses="hidden" />
-          </Col>
-          <Col float="center" className="sklad align-middle">
-            <Products/>
-          </Col>
-        </Row>
+        <Products/>
       </Container>
     )
   }

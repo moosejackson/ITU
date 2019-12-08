@@ -73,7 +73,7 @@ export default class App extends Component {
             />
             <Route
               exact
-              path={"/dashboard"}
+              path={"/products"}
               render={props => (
                 <Storage
                   {...props}

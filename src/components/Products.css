@@ -1,0 +1,25 @@
+.custom-search {
+    padding: auto;
+}
+
+.categories {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+tr.item.border.border-dark > td {
+
+}
+
+.centerBlock {
+    display: table;
+    margin: auto;
+}
+
+.item {
+    text-align: left;
+}
+
+#text-filter-column-Kategorie {
+    display: none;
+}
