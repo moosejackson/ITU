@@ -11,7 +11,6 @@ import { Col, Container, Row, InputGroup, FormControl, Button, Nav } from 'react
 
 import Products from '../data/Products'
 import Central from './Central'
-import Categories from '../data/Categories'
 
 import './Products.css'
 
@@ -151,11 +150,6 @@ export default class ProductTable extends Component {
           </ToolkitProvider>
         </Col>
       </Row>
-
-
     )
   }
 }
-
-
-//<BootstrapTable keyField='id' data={ Products } columns={ columns } pagination={ paginationFactory() } cellEdit={ cellEditFactory({ mode: 'dbclick' }) } />

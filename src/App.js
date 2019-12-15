@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import storage from './img/storage.png';
 import './App.css';
 
 import LoginPage from './components/Login.js'
-import Header from './components/Header'
-import { Container, Row } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
 import Storage from './components/Storage'
 
 
