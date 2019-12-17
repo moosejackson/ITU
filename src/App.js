@@ -32,15 +32,16 @@ export default class App extends Component {
     });
   }
 
+
   checkLoginStatus() {
         if (
-          this.state.loggedInStatus === "NOT_LOGGED_IN"
+          this.state.loggedInStatus === "LOGGED_IN"
         ) {
           this.setState({
             loggedInStatus: "LOGGED_IN"
           });
         } else if (
-          (this.state.loggedInStatus === "LOGGED_IN")
+          (this.state.loggedInStatus === "NOT_LOGGED_IN")
         ) {
           this.setState({
             loggedInStatus: "NOT_LOGGED_IN"

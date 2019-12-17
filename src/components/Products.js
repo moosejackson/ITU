@@ -89,10 +89,15 @@ export default class ProductTable extends Component {
                  onSelect={(selectedKey) => handleCategory(selectedKey)}
                  className="flex-column">
               <Nav.Item className="item">
-                <Nav.Link eventKey="Postele">
-                  Postele
+                <Nav.Link eventKey="">
+                  Všechny položky
                 </Nav.Link>
               </Nav.Item>
+              <Nav.Item className="item">
+              <Nav.Link eventKey="Postele">
+                Postele
+              </Nav.Link>
+            </Nav.Item>
               <Nav.Item className="item">
                 <Nav.Link eventKey="Koupelny">
                   Koupelny
