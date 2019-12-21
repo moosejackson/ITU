@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import BootstrapTable from 'react-bootstrap-table-next';
 import paginationFactory from 'react-bootstrap-table2-paginator';
 import cellEditFactory from 'react-bootstrap-table2-editor';
-import ToolkitProvider, { Search } from 'react-bootstrap-table2-toolkit';
+import ToolkitProvider from 'react-bootstrap-table2-toolkit';
 import filterFactory, { textFilter } from 'react-bootstrap-table2-filter';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
@@ -11,6 +11,7 @@ import { Col, Container, Row, InputGroup, FormControl, Button, Nav } from 'react
 
 import Products from '../data/Products'
 import Central from './Central'
+import Items from './categoryItems'
 
 import './Products.css'
 
@@ -78,12 +79,35 @@ const MySearch = (props) => {
 
 export default class ProductTable extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      categories: [""],
+    };
+    this.getCategories = this.getCategories.bind(this);
+  }
+
+  getCategories () {
+    let usedCategories = Products.map(product => product.category);
+    let results = (usedCategories) => usedCategories.filter((v,i) => usedCategories.indexOf(v) === i);
+    this.setState({categories: results(usedCategories)});
+  }
+
+  componentDidMount() {
+    this.getCategories();
+  }
+
   render() {
+
+    let categoryItems = this.state.categories.map( (category) => {
+      return Items(category)
+    })
+
     return (
       <Row >
         <Col md={3} float="center" className="sklad align-middle border border-secondary categories">
           <Central />
-          <Container className="kategorie">
+          <Container className="category">
             <Nav justify
                  variant="pills"
                  onSelect={(selectedKey) => handleCategory(selectedKey)}
@@ -93,41 +117,7 @@ export default class ProductTable extends Component {
                   Všechny položky
                 </Nav.Link>
               </Nav.Item>
-              <Nav.Item className="item">
-              <Nav.Link eventKey="Postele">
-                Postele
-              </Nav.Link>
-            </Nav.Item>
-              <Nav.Item className="item">
-                <Nav.Link eventKey="Koupelny">
-                  Koupelny
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item className="item">
-                <Nav.Link eventKey="Kanceláře">
-                  Kanceláře
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item className="item">
-                <Nav.Link eventKey="Obývací pokoje">
-                  Obývací pokoje
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item className="item">
-                <Nav.Link eventKey="Úložné prostory">
-                  Úložné prostory
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item className="item">
-                <Nav.Link eventKey="Kuchyně">
-                  Kuchyně
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item className="item">
-                <Nav.Link eventKey="Doplňky">
-                  Doplňky
-                </Nav.Link>
-              </Nav.Item>
+              { categoryItems }
             </Nav>
           </Container>
         </Col>

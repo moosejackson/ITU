@@ -23,3 +23,7 @@ tr.item.border.border-dark > td {
 #text-filter-column-Kategorie {
     display: none;
 }
+
+.category {
+    min-height: 300px;
+}
