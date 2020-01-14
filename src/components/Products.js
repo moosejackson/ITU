@@ -125,7 +125,8 @@ export default class ProductTable extends Component {
       categories: [""],
       page: 1,
       data: Products.slice(0, 10),
-      sizePerPage: 10
+      sizePerPage: 10,
+      totalSize: Products.length
     };
     this.getCategories = this.getCategories.bind(this);
   }
@@ -161,6 +162,7 @@ export default class ProductTable extends Component {
     const currentIndex = (page - 1) * sizePerPage;
     setTimeout(() => {
       this.setState(() => ({
+        totalSize: result.length,
         page,
         data: result.slice(currentIndex, currentIndex + sizePerPage),
         sizePerPage
@@ -182,7 +184,7 @@ export default class ProductTable extends Component {
       return Items(category)
     })
 
-    const { data, sizePerPage, page } = this.state;
+    const { data, sizePerPage, page, totalSize } = this.state;
 
     return (
       <Row >
@@ -207,7 +209,7 @@ export default class ProductTable extends Component {
             data={data}
             page={ page }
             sizePerPage={ sizePerPage }
-            totalSize={ Products.length }
+            totalSize={ totalSize }
             onTableChange={ this.handleTableChange }
           />
         </Col>
