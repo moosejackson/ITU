@@ -4,7 +4,7 @@ import BootstrapTable from 'react-bootstrap-table-next';
 import paginationFactory from 'react-bootstrap-table2-paginator';
 import cellEditFactory from 'react-bootstrap-table2-editor';
 import ToolkitProvider from 'react-bootstrap-table2-toolkit';
-import filterFactory, { textFilter } from 'react-bootstrap-table2-filter';
+import filterFactory, { textFilter, Comparator } from 'react-bootstrap-table2-filter'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { Col, Container, Row, InputGroup, FormControl, Button, Nav } from 'react-bootstrap'
@@ -136,15 +136,39 @@ export default class ProductTable extends Component {
     this.setState({categories: results(usedCategories)});
   }
 
-  handleTableChange = (type, { page, sizePerPage }) => {
+  handleTableChange = (type, { page, sizePerPage, filters }) => {
+
+    let result = Products;
+
+    // Handle column filters
+    result = result.filter((row) => {
+      let valid = true;
+      for (const dataField in filters) {
+        const { filterVal, filterType, comparator } = filters[dataField];
+
+        if (filterType === 'TEXT') {
+          if (comparator === Comparator.LIKE) {
+            valid = row[dataField].toString().indexOf(filterVal) > -1;
+          } else {
+            valid = row[dataField] === filterVal;
+          }
+        }
+        if (!valid) break;
+      }
+      return valid;
+    });
+
     const currentIndex = (page - 1) * sizePerPage;
     setTimeout(() => {
       this.setState(() => ({
         page,
-        data: Products.slice(currentIndex, currentIndex + sizePerPage),
+        data: result.slice(currentIndex, currentIndex + sizePerPage),
         sizePerPage
       }));
     }, 100);
+
+
+
     this.setState(() => ({ data: [] }));
   }
 
