@@ -1,30 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eb5ff48e-bec7-4de4-ac1d-d4077f0c86a0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Central.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/LoginForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Products.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Products.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Storage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Storage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/Categories.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/Products.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/storage.png" afterDir="false" />
+    <list default="true" id="eb5ff48e-bec7-4de4-ac1d-d4077f0c86a0" name="Default Changelist" comment="Lazy loading simulation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,6 +26,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/work/reactnative/offix-react-native-example" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -95,8 +74,72 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1575577540991</updated>
-      <workItem from="1575577542277" duration="21765000" />
+      <workItem from="1575577542277" duration="49830000" />
+      <workItem from="1575969022770" duration="918000" />
+      <workItem from="1576398733811" duration="7440000" />
+      <workItem from="1576573333851" duration="4504000" />
+      <workItem from="1576690270242" duration="8321000" />
+      <workItem from="1578320956439" duration="13000" />
+      <workItem from="1578932499337" duration="5015000" />
+      <workItem from="1579018566881" duration="7120000" />
     </task>
+    <task id="LOCAL-00001" summary="Login and redirect">
+      <created>1575603250605</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1575603250605</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Category and basic data">
+      <created>1575607840048</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1575607840048</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Search and categories navigation">
+      <created>1575841220546</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1575841220546</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Cleanup, README update">
+      <created>1575843412981</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1575843412981</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Cleanup">
+      <created>1576402460121</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1576402460121</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Minor changes">
+      <created>1576574254131</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1576574254131</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Category navigation generated">
+      <created>1576964280472</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1576964280472</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Lazy loading simulation">
+      <created>1579024373589</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1579024373589</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,10 +150,23 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Login and redirect" />
+    <MESSAGE value="Category and basic data" />
+    <MESSAGE value="Search and categories navigation" />
+    <MESSAGE value="Cleanup, README update" />
+    <MESSAGE value="Cleanup" />
+    <MESSAGE value="Minor changes" />
+    <MESSAGE value="Category navigation generated" />
+    <MESSAGE value="Lazy loading simulation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lazy loading simulation" />
   </component>
 </project>
