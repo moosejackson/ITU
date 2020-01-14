@@ -18,34 +18,36 @@ import './Products.css'
 let catFilter;
 let input;
 
-const columns = [{
-  dataField: 'id',
-  text: 'ID'
-}, {
-  dataField: 'name',
-  text: ' Název'
-}, {
-  dataField: 'category',
-  text: 'Kategorie',
-  filter: textFilter({
-    getFilter: (filter) => {
-      // catFilter was assigned once the component has been mounted.
-      catFilter = filter;
-    }
-  })
-}, {
-  dataField: 'subcategory',
-  text: 'Podkat.'
-}, {
-  dataField: 'location',
-  text: 'Lokace'
-}, {
-  dataField: 'onStock',
-  text: 'Na skladě'
-}, {
-  dataField: 'price',
-  text: 'Cena'
-}];
+const columns = [
+  {
+    dataField: 'id',
+    text: 'ID'
+  }, {
+    dataField: 'name',
+    text: ' Název'
+  }, {
+    dataField: 'category',
+    text: 'Kategorie',
+    filter: textFilter({
+      getFilter: (filter) => {
+        // catFilter was assigned once the component has been mounted.
+        catFilter = filter;
+      }
+    })
+  }, {
+    dataField: 'subcategory',
+    text: 'Podkat.'
+  }, {
+    dataField: 'location',
+    text: 'Lokace'
+  }, {
+    dataField: 'onStock',
+    text: 'Na skladě'
+  }, {
+    dataField: 'price',
+    text: 'Cena'
+  }
+];
 
 const handleCategory = (selectedKey) => {
   catFilter(selectedKey);
@@ -77,12 +79,53 @@ const MySearch = (props) => {
   );
 };
 
+const NoDataIndication = () => (
+  <div className="spinner">
+    <div className="rect1" />
+    <div className="rect2" />
+    <div className="rect3" />
+    <div className="rect4" />
+    <div className="rect5" />
+  </div>
+);
+
+const Table = ({ data, page, sizePerPage, onTableChange, totalSize }) => (
+    <ToolkitProvider
+      keyField="id"
+      data={ data }
+      columns={ columns }
+      search
+    >
+      {
+        props => (
+          <div>
+            <MySearch { ...props.searchProps } />
+            <hr />
+            <BootstrapTable
+              remote
+              { ...props.baseProps}
+              pagination={ paginationFactory({ page, sizePerPage, totalSize }) }
+              onTableChange={ onTableChange }
+              noDataIndication={ () => <NoDataIndication /> }
+              cellEdit={ cellEditFactory({ mode: 'dbclick' })  }
+              filter={ filterFactory() }
+            />
+          </div>
+        )
+      }
+    </ToolkitProvider>
+);
+
+
 export default class ProductTable extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
       categories: [""],
+      page: 1,
+      data: Products.slice(0, 10),
+      sizePerPage: 10
     };
     this.getCategories = this.getCategories.bind(this);
   }
@@ -91,6 +134,18 @@ export default class ProductTable extends Component {
     let usedCategories = Products.map(product => product.category);
     let results = (usedCategories) => usedCategories.filter((v,i) => usedCategories.indexOf(v) === i);
     this.setState({categories: results(usedCategories)});
+  }
+
+  handleTableChange = (type, { page, sizePerPage }) => {
+    const currentIndex = (page - 1) * sizePerPage;
+    setTimeout(() => {
+      this.setState(() => ({
+        page,
+        data: Products.slice(currentIndex, currentIndex + sizePerPage),
+        sizePerPage
+      }));
+    }, 100);
+    this.setState(() => ({ data: [] }));
   }
 
   componentDidMount() {
@@ -102,6 +157,8 @@ export default class ProductTable extends Component {
     let categoryItems = this.state.categories.map( (category) => {
       return Items(category)
     })
+
+    const { data, sizePerPage, page } = this.state;
 
     return (
       <Row >
@@ -122,27 +179,13 @@ export default class ProductTable extends Component {
           </Container>
         </Col>
         <Col float="center" className="sklad align-middle border border-secondary">
-          <ToolkitProvider
-            keyField="id"
-            data={ Products }
-            columns={ columns }
-            search
-          >
-            {
-              props => (
-                <div>
-                  <MySearch { ...props.searchProps } />
-                  <hr />
-                  <BootstrapTable
-                    { ...props.baseProps}
-                    pagination={ paginationFactory() }
-                    cellEdit={ cellEditFactory({ mode: 'dbclick' })  }
-                    filter={ filterFactory() }
-                  />
-                </div>
-              )
-            }
-          </ToolkitProvider>
+          <Table
+            data={data}
+            page={ page }
+            sizePerPage={ sizePerPage }
+            totalSize={ Products.length }
+            onTableChange={ this.handleTableChange }
+          />
         </Col>
       </Row>
     )
