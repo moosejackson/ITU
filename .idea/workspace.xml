@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eb5ff48e-bec7-4de4-ac1d-d4077f0c86a0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/data/Users.js" afterDir="false" />
+    <list default="true" id="eb5ff48e-bec7-4de4-ac1d-d4077f0c86a0" name="Default Changelist" comment="Lazy loading simulation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoginForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Products.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products.js" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,28 +23,31 @@
   </component>
   <component name="ProjectId" id="1UZwh54WXaLKneUpHM9Y8yv3jnZ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
   <component name="PropertiesComponent">
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/work/reactnative/offix-react-native-example" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="$USER_HOME$/.nvm/versions/node/v4.4.7/bin/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="npm.npm start">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
@@ -66,18 +64,6 @@
       <method v="2" />
     </configuration>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -88,10 +74,72 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1575577540991</updated>
-      <workItem from="1575577542277" duration="21765000" />
-      <workItem from="1578940914938" duration="14538000" />
-      <workItem from="1579016713400" duration="9204000" />
+      <workItem from="1575577542277" duration="49830000" />
+      <workItem from="1575969022770" duration="918000" />
+      <workItem from="1576398733811" duration="7440000" />
+      <workItem from="1576573333851" duration="4504000" />
+      <workItem from="1576690270242" duration="8321000" />
+      <workItem from="1578320956439" duration="13000" />
+      <workItem from="1578932499337" duration="5015000" />
+      <workItem from="1579018566881" duration="7120000" />
     </task>
+    <task id="LOCAL-00001" summary="Login and redirect">
+      <created>1575603250605</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1575603250605</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Category and basic data">
+      <created>1575607840048</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1575607840048</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Search and categories navigation">
+      <created>1575841220546</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1575841220546</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Cleanup, README update">
+      <created>1575843412981</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1575843412981</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Cleanup">
+      <created>1576402460121</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1576402460121</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Minor changes">
+      <created>1576574254131</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1576574254131</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Category navigation generated">
+      <created>1576964280472</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1576964280472</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Lazy loading simulation">
+      <created>1579024373589</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1579024373589</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,74 +158,15 @@
       </map>
     </option>
   </component>
-  <component name="WindowStateProjectService">
-    <state x="361" y="71" key="#ESLint" timestamp="1579016883865">
-      <screen x="0" y="0" width="1536" height="826" />
-    </state>
-    <state x="361" y="71" key="#ESLint/0.0.1536.826@0.0.1536.826" timestamp="1579016883865" />
-    <state width="1514" height="261" key="GridCell.Tab.0.bottom" timestamp="1579007577139">
-      <screen x="0" y="0" width="1536" height="826" />
-    </state>
-    <state width="1514" height="261" key="GridCell.Tab.0.bottom/0.0.1536.826@0.0.1536.826" timestamp="1579007577139" />
-    <state width="1514" height="261" key="GridCell.Tab.0.center" timestamp="1579007577139">
-      <screen x="0" y="0" width="1536" height="826" />
-    </state>
-    <state width="1514" height="261" key="GridCell.Tab.0.center/0.0.1536.826@0.0.1536.826" timestamp="1579007577139" />
-    <state width="1514" height="261" key="GridCell.Tab.0.left" timestamp="1579007577138">
-      <screen x="0" y="0" width="1536" height="826" />
-    </state>
-    <state width="1514" height="261" key="GridCell.Tab.0.left/0.0.1536.826@0.0.1536.826" timestamp="1579007577138" />
-    <state width="1514" height="261" key="GridCell.Tab.0.right" timestamp="1579007577139">
-      <screen x="0" y="0" width="1536" height="826" />
-    </state>
-    <state width="1514" height="261" key="GridCell.Tab.0.right/0.0.1536.826@0.0.1536.826" timestamp="1579007577139" />
-    <state width="1514" height="261" key="GridCell.Tab.1.bottom" timestamp="1579007577140">
-      <screen x="0" y="0" width="1536" height="826" />
-    </state>
-    <state width="1514" height="261" key="GridCell.Tab.1.bottom/0.0.1536.826@0.0.1536.826" timestamp="1579007577140" />
-    <state width="1514" height="261" key="GridCell.Tab.1.center" timestamp="1579007577140">
-      <screen x="0" y="0" width="1536" height="826" />
-    </state>
-    <state width="1514" height="261" key="GridCell.Tab.1.center/0.0.1536.826@0.0.1536.826" timestamp="1579007577140" />
-    <state width="1514" height="261" key="GridCell.Tab.1.left" timestamp="1579007577140">
-      <screen x="0" y="0" width="1536" height="826" />
-    </state>
-    <state width="1514" height="261" key="GridCell.Tab.1.left/0.0.1536.826@0.0.1536.826" timestamp="1579007577140" />
-    <state width="1514" height="261" key="GridCell.Tab.1.right" timestamp="1579007577140">
-      <screen x="0" y="0" width="1536" height="826" />
-    </state>
-    <state width="1514" height="261" key="GridCell.Tab.1.right/0.0.1536.826@0.0.1536.826" timestamp="1579007577140" />
-    <state width="1514" height="261" key="GridCell.Tab.2.bottom" timestamp="1579007577141">
-      <screen x="0" y="0" width="1536" height="826" />
-    </state>
-    <state width="1514" height="261" key="GridCell.Tab.2.bottom/0.0.1536.826@0.0.1536.826" timestamp="1579007577141" />
-    <state width="1514" height="261" key="GridCell.Tab.2.center" timestamp="1579007577141">
-      <screen x="0" y="0" width="1536" height="826" />
-    </state>
-    <state width="1514" height="261" key="GridCell.Tab.2.center/0.0.1536.826@0.0.1536.826" timestamp="1579007577141" />
-    <state width="1514" height="261" key="GridCell.Tab.2.left" timestamp="1579007577141">
-      <screen x="0" y="0" width="1536" height="826" />
-    </state>
-    <state width="1514" height="261" key="GridCell.Tab.2.left/0.0.1536.826@0.0.1536.826" timestamp="1579007577141" />
-    <state width="1514" height="261" key="GridCell.Tab.2.right" timestamp="1579007577141">
-      <screen x="0" y="0" width="1536" height="826" />
-    </state>
-    <state width="1514" height="261" key="GridCell.Tab.2.right/0.0.1536.826@0.0.1536.826" timestamp="1579007577141" />
-    <state width="1514" height="261" key="GridCell.Tab.3.bottom" timestamp="1579007577142">
-      <screen x="0" y="0" width="1536" height="826" />
-    </state>
-    <state width="1514" height="261" key="GridCell.Tab.3.bottom/0.0.1536.826@0.0.1536.826" timestamp="1579007577142" />
-    <state width="1514" height="261" key="GridCell.Tab.3.center" timestamp="1579007577142">
-      <screen x="0" y="0" width="1536" height="826" />
-    </state>
-    <state width="1514" height="261" key="GridCell.Tab.3.center/0.0.1536.826@0.0.1536.826" timestamp="1579007577142" />
-    <state width="1514" height="261" key="GridCell.Tab.3.left" timestamp="1579007577142">
-      <screen x="0" y="0" width="1536" height="826" />
-    </state>
-    <state width="1514" height="261" key="GridCell.Tab.3.left/0.0.1536.826@0.0.1536.826" timestamp="1579007577142" />
-    <state width="1514" height="261" key="GridCell.Tab.3.right" timestamp="1579007577142">
-      <screen x="0" y="0" width="1536" height="826" />
-    </state>
-    <state width="1514" height="261" key="GridCell.Tab.3.right/0.0.1536.826@0.0.1536.826" timestamp="1579007577142" />
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Login and redirect" />
+    <MESSAGE value="Category and basic data" />
+    <MESSAGE value="Search and categories navigation" />
+    <MESSAGE value="Cleanup, README update" />
+    <MESSAGE value="Cleanup" />
+    <MESSAGE value="Minor changes" />
+    <MESSAGE value="Category navigation generated" />
+    <MESSAGE value="Lazy loading simulation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lazy loading simulation" />
   </component>
 </project>
