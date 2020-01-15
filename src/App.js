@@ -4,8 +4,8 @@ import './App.css';
 
 import LoginPage from './components/Login.js'
 import { Container } from 'react-bootstrap'
-import Storage from './components/Storage'
 import Home from './components/Home'
+
 
 
 export default class App extends Component {
@@ -35,19 +35,19 @@ export default class App extends Component {
 
 
   checkLoginStatus() {
-        if (
-          this.state.loggedInStatus === "LOGGED_IN"
-        ) {
-          this.setState({
-            loggedInStatus: "LOGGED_IN"
-          });
-        } else if (
-          (this.state.loggedInStatus === "NOT_LOGGED_IN")
-        ) {
-          this.setState({
-            loggedInStatus: "NOT_LOGGED_IN"
-          });
-        }
+    if (
+      this.state.loggedInStatus === "LOGGED_IN"
+    ) {
+      this.setState({
+        loggedInStatus: "LOGGED_IN"
+      });
+    } else if (
+      (this.state.loggedInStatus === "NOT_LOGGED_IN")
+    ) {
+      this.setState({
+        loggedInStatus: "NOT_LOGGED_IN"
+      });
+    }
   }
 
   componentDidMount() {
@@ -72,25 +72,16 @@ export default class App extends Component {
               )}
             />
             <Route
-                exact
-                path={"/products"}
-                render={props => (
-                    <Storage
-                        {...props}
-                        loggedInStatus={this.state.loggedInStatus}
-                    />
-                )}
+              exact
+              path={"/home"}
+              render={props => (
+                <Home
+                  {...props}
+                  loggedInStatus={this.state.loggedInStatus}
+                />
+              )}
             />
-            <Route
-                exact
-                path={"/home"}
-                render={props => (
-                    <Home
-                        {...props}
-                        loggedInStatus={this.state.loggedInStatus}
-                    />
-                )}
-            />
+
 
           </Switch>
         </BrowserRouter>

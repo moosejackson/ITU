@@ -1,53 +1,60 @@
 import React, {Component} from 'react';
-import {Col, Container, Form, Row} from 'react-bootstrap'
+import { Button, Col, Container, Form, Row } from 'react-bootstrap'
+import { BrowserRouter as Router, Switch, Route, Link, useRouteMatch} from "react-router-dom";
 import Central from './Central'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUserCircle } from '@fortawesome/free-regular-svg-icons'
+import Storage from './Storage'
+import Inventura from './Inventura'
 
-import './Login.css';
-import LoginForm from './LoginForm'
-import storage from '../img/storage.png'
+import './Home.css';
+import Header from './Header'
 
-export default class LoginPage extends Component {
-  constructor(props) {
-    super(props);
 
-    this.handleSuccessfulAuth = this.handleSuccessfulAuth.bind(this);
+const homeLinks = () => (
+  <div>
+    <Header/>
+    <Row >
+      <Col md={3} float="center" className="sklad align-middle">
+        <Central />
+      </Col>
+      <Col md={{ span: 2, offset: 2 }}>
+        <div className="centerBlock">
+          <Button variant="primary" class="linkButton">
+            <Link to={`/inventura`} class="link">
+              Provést inventuru
+            </Link>
+          </Button>
+          <Button variant="primary" class="linkButton">
+            <Link to={`/products`} class="link">
+              Skladové položky
+            </Link>
+          </Button>
+        </div>
+      </Col>
+    </Row>
+  </div>
+)
 
-  }
-
-  handleSuccessfulAuth(i) {
-
-    this.props.history.push("/products");
-  }
-
+export default class Home extends Component {
 
   render() {
-
     return (
         <Container>
-          <Row>
-            <img src={storage} alt="Logo" className="logo "/>
-          </Row>
-
-          <Row >
-            <Col md={3} float="center" className="sklad align-middle">
-              <Central />
-            </Col>
-            <Col md={{ span: 2, offset: 2 }}>
-              <div className="centerBlock">
-                <Form.Control type="Button" value="Skladové položky" data-test="submit" onClick={() => this.handleSuccessfulAuth(1)} size="lg"/>
-                <Form.Control type="Button" value="Provést inventuru" data-test="submit" size="lg"/>
-
-              </div>
-            </Col>
-
-
-
-          </Row>
-
-
-
+          <Router>
+            <Switch>
+              <Route
+                path={"/home"}
+                component={homeLinks}
+              />
+              <Route
+                path={"/products"}
+                component={Storage}
+              />
+              <Route
+                path={"/inventura"}
+                component={Inventura}
+              />
+            </Switch>
+          </Router>
         </Container>
     );
   }
